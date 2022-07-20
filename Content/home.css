@@ -1,56 +1,16 @@
-﻿/* General */
-* {
-    /* border: 1px solid black; */
-}
-
-body {
+﻿/* Home */
+.function-links {
+    width: fit-content;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    box-sizing: border-box;
     animation: opening ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color: rgb(10, 41, 99);
 }
 
-/* Body */
-.function-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20vh;
-    width: fit-content;
-}
-
-    .function-links > div {
-        width: 30vw;
-        text-align: center;
-        padding: 20px 0 20px;
-        border-radius: 5px;
-        margin: 15px;
-        background-color: white;
-        font-weight: 700;
-        text-transform: capitalize;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: 500ms;
-    }
-
-        .function-links > div:hover {
-            background-color: rgb(189, 189, 189);
-        }
-
-/* Important properties */
-.accent-color {
-    color: rgb(10, 41, 99);
-}
-
-/* Other */
 @keyframes opening {
     0% {
         transform: translateX(100%);
@@ -59,4 +19,25 @@ body {
     100% {
         transform: translateX(0%);
     }
+}
+
+.function-links a {
+    margin: 20px 0 20px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition-duration: 500ms;
+    background-color: rgb(10, 41, 99, 0.9);
+    color: white;
+}
+
+.function-links > a:hover {
+    background-color: rgb(10, 41, 99);
+    color: white;
 }

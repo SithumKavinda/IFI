@@ -1,0 +1,94 @@
+﻿/* Employee Page */
+
+.employee-page {
+    padding: 30px;
+    width: 100%;
+    animation: opening ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opening {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.employee-page .btn-area {
+    padding: 0 0 20px;
+}
+
+    .employee-page .btn-area button {
+        text-transform: capitalize;
+    }
+
+.employee-page table {
+    width: 100%;
+}
+
+    .employee-page table .btn {
+        text-transform: uppercase;
+    }
+
+.employee-page th {
+    text-align: center;
+}
+
+.employee-page td {
+    text-align: center;
+    word-wrap: break-word;
+    /* This text should vertically align center */
+}
+
+/* Employee Form */
+.msg-box {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+    .msg-box .btn-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .msg-box .text-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px 0;
+    }
+
+        .msg-box .text-logo i.fa-solid {
+            color: rgb(255, 187, 0);
+            font-size: 20pt;
+            padding-right: 10px;
+        }
+
+    .msg-box .button-area {
+        padding: 5px 10px 0;
+        text-align: right;
+    }
+
+        .msg-box .button-area button {
+            outline: none;
+            border: none;
+            width: 3rem;
+            box-shadow: none;
+            margin: 5px;
+        }

@@ -1,0 +1,9 @@
+﻿* {
+    /* border: 1px solid black; */
+}
+
+.emp-form {
+    width: 50%;
+    height: fit-content;
+    padding: 10px 20px 10px;
+}

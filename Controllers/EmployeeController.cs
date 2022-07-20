@@ -6,19 +6,14 @@ using System.Web.Mvc;
 
 namespace Vidly.Controllers
 {
-    public class HomeController : Controller
+    public class EmployeeController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
+        // GET: Employee
         public ActionResult Employee()
         {
             return View();
         }
-
-        public ActionResult Emp_form()
+        ActionResult register()
         {
             return View();
         }

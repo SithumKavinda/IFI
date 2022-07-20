@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Register New Employee";
+}
+<!--Employee Form-->
+<div class="emp-form bg-light mt-2 mb-3 border border-3 rounded">
+    <form action="Employee/register" method="post" >
+        <fieldset>
+            <!-- nic -->
+            <div class="form-group">
+                <label for="nic" class="form-label mt-4 all-cap">nic</label>
+                <input type="text"
+                       class="form-control"
+                       id="nic"
+                       placeholder="992993553V" />
+            </div>
+            <!-- First name -->
+            <div class="form-group">
+                <label for="fname" class="form-label mt-4 f-cap">first name</label>
+                <input type="text"
+                       class="form-control"
+                       id="fname"
+                       placeholder="John" />
+            </div>
+            <!-- Last name -->
+            <div class="form-group">
+                <label for="lname" class="form-label mt-4 f-cap">last name</label>
+                <input type="text"
+                       class="form-control"
+                       id="lname"
+                       placeholder="Player" />
+            </div>
+            <!-- House No -->
+            <div class="form-group">
+                <label for="house-no" class="form-label mt-4 f-cap">house no</label>
+                <input type="text"
+                       class="form-control"
+                       id="house-no"
+                       placeholder="58/40/A" />
+            </div>
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address" class="form-label mt-4 f-cap">last name</label>
+                <input type="text"
+                       class="form-control"
+                       id="address"
+                       placeholder="Hiripitiya, Pannipitiya" />
+            </div>
+            <!-- City -->
+            <div class="form-group">
+                <label for="city" class="form-label mt-4 f-cap">city</label>
+                <input type="text"
+                       class="form-control"
+                       id="city"
+                       placeholder="Kottawa" />
+            </div>
+            <!-- Postal Code -->
+            <div class="form-group">
+                <label for="p-code" class="form-label mt-4 f-cap">postal code</label>
+                <input type="text"
+                       class="form-control"
+                       id="p-code"
+                       placeholder="10232" />
+            </div>
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob" class="form-label mt-4 f-cap">date of birth</label>
+                <input type="date" class="form-control" id="dob" />
+            </div>
+            <!-- Gender -->
+            <div class="form-group">
+                <label class="form-label mt-4 f-cap">gender</label>
+                <div class="px-5">
+                    <div class="form-check">
+                        <label class="form-check-label f-cap">
+                            <input type="radio"
+                                   class="form-check-input"
+                                   name="gender"
+                                   id="f-male"
+                                   value="male"
+                                   checked="" />
+                            male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label f-cap">
+                            <input type="radio"
+                                   class="form-check-input"
+                                   name="gender"
+                                   id="g-female"
+                                   value="female" />
+                            female
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Joined Date -->
+            <div class="form-group">
+                <label for="j-date" class="form-label mt-4 f-cap f-cap">joined date</label>
+                <input type="date" class="form-control" id="j-date" />
+            </div>
+            <!-- Pay rate -->
+            <div class="form-group">
+                <label for="p-rate" class="form-label mt-4 f-cap">pay rate for a day</label>
+                <input type="number"
+                       class="form-control"
+                       id="p-rate"
+                       placeholder="2000.00" />
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group p-3 d-flex justify-content-center align-content-center">
+                <button type="submit" class="btn btn-lg btn-success all-cap w-50">save</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

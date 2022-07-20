@@ -2,11 +2,10 @@
     ViewBag.Title = "Home";
 }
 
-@Styles.Render("homeStyles")
-
+<!-- Home -->
 <div class="function-links">
-    <div class="employee">employees management</div>
-    <div class="funds">funds management</div>
-    <div class="attendance">attendance management</div>
-    <div class="salary">salary management</div>
+    @Html.ActionLink("employees management", "Employee", "Home")
+    @Html.ActionLink("funds management", "Funds", "Home")
+    @Html.ActionLink("attendance management", "Attendance", "Home")
+    @Html.ActionLink("salary management", "Salary", "Home")
 </div>
