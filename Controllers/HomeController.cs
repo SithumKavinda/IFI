@@ -12,15 +12,5 @@ namespace Vidly.Controllers
         {
             return View();
         }
-
-        public ActionResult Employee()
-        {
-            return View();
-        }
-
-        public ActionResult Emp_form()
-        {
-            return View();
-        }
     }
 }

@@ -22,17 +22,19 @@
     padding: 0 0 20px;
 }
 
-    .employee-page .btn-area button {
+    .employee-page .btn-area a {
         text-transform: capitalize;
     }
+
+.employee-page .table-area {
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
 
 .employee-page table {
     width: 100%;
 }
-
-    .employee-page table .btn {
-        text-transform: uppercase;
-    }
 
 .employee-page th {
     text-align: center;

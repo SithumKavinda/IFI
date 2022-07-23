@@ -1,0 +1,122 @@
+﻿@model Vidly.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    
+</style>
+
+<div class="emp-form bg-light mt-2 mb-3 border border-3 rounded">
+    <div class="close-button">
+        <a class="btn btn-close" href="employee"></a>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        // National Identity Card
+        <div class="form-group">
+            @Html.LabelFor(model => model.nic, "national identity card no", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.nic, new { htmlAttributes = new { @class = "form-control", @placeholder = "992993553V" } })
+            @Html.ValidationMessageFor(model => model.nic, "", new { @class = "text-danger" })
+        </div>
+
+        //First Name
+        <div class="form-group">
+            @Html.LabelFor(model => model.fName, "first name", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.fName, new { htmlAttributes = new { @class = "form-control", @placeholder = "John" } })
+            @Html.ValidationMessageFor(model => model.fName, "", new { @class = "text-danger" })
+        </div>
+
+        // Last Name
+        <div class="form-group">
+            @Html.LabelFor(model => model.lName, "last name", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.lName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Player" } })
+            @Html.ValidationMessageFor(model => model.lName, "", new { @class = "text-danger" })
+        </div>
+
+        // House No
+        <div class="form-group">
+            @Html.LabelFor(model => model.houseNo, "house no", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.houseNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "58/40/A" } })
+            @Html.ValidationMessageFor(model => model.houseNo, "", new { @class = "text-danger" })
+        </div>
+
+        // Address
+        <div class="form-group">
+            @Html.LabelFor(model => model.address, "address", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.address, new { htmlAttributes = new { @class = "form-control", @placeholder = "Hiripitiya, Pannipitiya" } })
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+
+        // City
+        <div class="form-group">
+            @Html.LabelFor(model => model.city, "city", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control", @placeholder = "Kottawa" } })
+            @Html.ValidationMessageFor(model => model.city, "", new { @class = "text-danger" })
+        </div>
+
+        // Postal Code
+        <div class="form-group">
+            @Html.LabelFor(model => model.postalCode, "postal code", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.postalCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "10232" } })
+                @Html.ValidationMessageFor(model => model.postalCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        // Date Of Birth
+        <div class="form-group">
+            @Html.LabelFor(model => model.dob, "date of birth", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dob, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @Html.ValidationMessageFor(model => model.dob, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        // Gender
+        <div class="form-group">
+            @Html.LabelFor(model => model.gender, htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+
+            <div class="px-5">
+                <div class="form-check">
+                    @Html.Label("male", new { @class = "form-check-label f-cap", @for = "g-male" })
+                    @Html.RadioButtonFor(model => model.gender, "male", new { @class = "form-check-input", @checked = "true", @id = "g-male" })
+                </div>
+                <div class="form-check">
+                    @Html.Label("female", new { @class = "form-check-label f-cap", @for = "g-female" })
+                    @Html.RadioButtonFor(model => model.gender, "female", new { @class = "form-check-input", @id = "g-female" })
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
+        </div>
+
+        // Joined Date
+        <div class="form-group">
+            @Html.LabelFor(model => model.joinedDate, "joined date", htmlAttributes: new { @class = "form-label mt-4 f-cap f-cap" })
+            @Html.EditorFor(model => model.joinedDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+            @Html.ValidationMessageFor(model => model.joinedDate, "", new { @class = "text-danger" })
+        </div>
+
+        // Pay Rate
+        <div class="form-group">
+            @Html.LabelFor(model => model.payRate, "pay rate", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            @Html.EditorFor(model => model.payRate, new { htmlAttributes = new { @class = "form-control", @type = "number", @placeholder = "2000.00" } })
+            @Html.ValidationMessageFor(model => model.payRate, "", new { @class = "text-danger" })
+        </div>
+
+        // Submit Button
+        <div class="form-group p-3 d-flex justify-content-center align-content-center">
+            <input type="submit" value="save" class="btn btn-lg btn-success all-cap w-50" />
+        </div>
+
+        <div class="form-group">
+            @Html.ValidationSummary(false, "Form can\'t submit because of below errors...", new { @class = "text-danger" })
+        </div>
+    }
+
+</div>

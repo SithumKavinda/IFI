@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Vidly.Models;
+using Vidly.DAO;
+
 namespace Vidly.Controllers
 {
     public class EmployeeController : Controller
@@ -11,11 +14,18 @@ namespace Vidly.Controllers
         // GET: Employee
         public ActionResult Employee()
         {
-            return View();
+            EmployeeDAO EmployeeDAO = new EmployeeDAO();
+            List<EmployeeModel> empList = EmployeeDAO.getEmployees();
+            return View("Employee", empList);
         }
-        ActionResult register()
+        public ActionResult create()
         {
             return View();
+        }
+
+        public ActionResult save()
+        {
+            return RedirectToAction("employee");
         }
     }
 }

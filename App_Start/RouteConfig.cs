@@ -13,6 +13,27 @@ namespace Vidly
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Open Employee page
+            routes.MapRoute(
+                name: "Employee",
+                url: "employee",
+                defaults: new { controller = "Employee", action = "Employee" }
+            );
+
+            // Open Registration form
+            routes.MapRoute(
+                name: "register",
+                url: "employee/register",
+                defaults: new { controller = "Employee", action = "register" }
+            );
+
+            // Save new Employee
+            routes.MapRoute(
+                name: "saveRegistraion",
+                url: "employee/save",
+                defaults: new { controller = "Employee", action = "save" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

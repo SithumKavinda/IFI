@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Vidly.Models.EmployeeModel>
+
+@{
+    ViewBag.Title = "Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="employee-page">
+        <div class="btn-area">
+            @Html.ActionLink("register new employee", "create", null, new {@class="btn btn-success"})
+        </div>
+        <div class="table-area">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="all-cap">
+                            nic
+                        </th>
+                        <th scope="col" class="f-cap">
+                            first name
+                        </th>
+                        <th scope="col" class="f-cap">
+                            last name
+                        </th>
+                        <th scope="col" class="f-cap">
+                            house no
+                        </th>
+                        <th scope="col" class="f-cap">
+                            address
+                        </th>
+                        <th scope="col" class="f-cap">
+                            city
+                        </th>
+                        <th scope="col" class="f-cap">
+                            postal code
+                        </th>
+                        <th scope="col" class="all-cap">
+                            dob
+                        </th>
+                        <th scope="col" class="f-cap">
+                            age
+                        </th>
+                        <th scope="col" class="f-cap">
+                            gender
+                        </th>
+                        <th scope="col" class="f-cap">
+                            joined date
+                        </th>
+                        <th scope="col" class="f-cap">
+                            pay rate
+                        </th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr class="table-light">
+                            <td class="all-cap">
+                                @Html.DisplayFor(modelItem => item.nic)
+                            </td>
+                            <td class="f-cap">
+                                @Html.DisplayFor(modelItem => item.fName)
+                            </td>
+                            <td class="f-cap">
+                                @Html.DisplayFor(modelItem => item.lName)
+                            </td>
+                            <td class="all-cap">
+                                @Html.DisplayFor(modelItem => item.houseNo)
+                            </td>
+                            <td class="f-cap">
+                                @Html.DisplayFor(modelItem => item.address)
+                            </td>
+                            <td class="f-cap">
+                                @Html.DisplayFor(modelItem => item.city)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.postalCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.dob)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.age)
+                            </td>
+                            <td class="f-cap">
+                                @Html.DisplayFor(modelItem => item.gender)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.joinedDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.payRate)
+                            </td>
+                            <td>
+                                @Html.ActionLink("edit", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-primary btn-sm all-cap" })
+                            </td>
+                            <td>
+                                @Html.ActionLink("remove", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger btn-sm all-cap" })
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
