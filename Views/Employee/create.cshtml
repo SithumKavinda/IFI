@@ -6,7 +6,7 @@
 }
 
 <style>
-    
+
 </style>
 
 <div class="emp-form bg-light mt-2 mb-3 border border-3 rounded">
@@ -21,8 +21,8 @@
         // National Identity Card
         <div class="form-group">
             @Html.LabelFor(model => model.nic, "national identity card no", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
-            @Html.EditorFor(model => model.nic, new { htmlAttributes = new { @class = "form-control", @placeholder = "992993553V" } })
-            @Html.ValidationMessageFor(model => model.nic, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.nic, new { htmlAttributes = new { @class = "form-control", @placeholder = "992993553V", @required = "true" } })
+            @Html.ValidationMessageFor(model => model.nic)
         </div>
 
         //First Name
@@ -66,6 +66,24 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.postalCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "10232" } })
                 @Html.ValidationMessageFor(model => model.postalCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        // Phone Number : Mobile
+        <div class="form-group">
+            @Html.LabelFor(model => model.phoneNo_mobile, "phone no(mobile)", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.phoneNo_mobile, new { htmlAttributes = new { @class = "form-control", @placeholder = "0719994659", @type="tel" } })
+                @Html.ValidationMessageFor(model => model.phoneNo_mobile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+     
+        // Phone Number : Home
+        <div class="form-group">
+            @Html.LabelFor(model => model.phoneNo_home, "phone no(land)", htmlAttributes: new { @class = "form-label mt-4 f-cap" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.phoneNo_home, new { htmlAttributes = new { @class = "form-control", @placeholder = "0115629039", @type="tel" } })
+                @Html.ValidationMessageFor(model => model.phoneNo_home, "", new { @class = "text-danger" })
             </div>
         </div>
 

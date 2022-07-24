@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Models
 {
@@ -14,6 +15,8 @@ namespace Vidly.Models
         public string address { get; set; }
         public string city { get; set; }
         public int postalCode { get; set; }
+        public string phoneNo_mobile { get; set; }
+        public string phoneNo_home { get; set; }
         public string dob { get; set; }
         public int age { get; set; }
         public string gender { get; set; }
