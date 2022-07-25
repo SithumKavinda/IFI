@@ -173,3 +173,8 @@ values (
 
 select * from [dbo].[employee];
 select * from [dbo].[contact];
+
+-- Test insert query for Register new employee
+insert into [dbo].[employee] values (@nic, @fname, @lname, @houseNo, @address, @city, @zip, @dob, @age, @gender, @dateJoined, @rate);
+
+insert into [dbo].[contact] values (@nic, @tp, @type);

@@ -34,6 +34,13 @@ namespace Vidly
                 defaults: new { controller = "Employee", action = "save" }
             );
 
+            // close on Employee
+            routes.MapRoute(
+                name: "closeRegistration",
+                url: "employee/close",
+                defaults: new { controller = "Employee", action = "close" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

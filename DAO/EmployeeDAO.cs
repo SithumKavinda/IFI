@@ -6,19 +6,36 @@ using Vidly.Models;
 
 namespace Vidly.DAO
 {
-    public class EmployeeDAO
+    internal class EmployeeDAO
     {
-        public List<EmployeeModel> getEmployees()
+        public List<EmployeeModel> FetchEmployees()
         {
             List<EmployeeModel> employees = new List<EmployeeModel>();
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
-            employees.Add(new EmployeeModel("992993553v", "sithum", "kavinda", "58/40/a", "hiripitiya, pannipitiya", "kottawa", 10232, "1999-10-25", 23, "Male", (DateTime.Now.Year + "/" + DateTime.Now.Month + "/" + DateTime.Now.Day), 2500.00));
+
+            // Get data from employee table and assign to above list
+            //using (resource)
+            //{
+            //    // DB Connection will use inside of this code block
+            //}
 
             return employees;
         } 
+
+        public void register(EmployeeModel employee)
+        {
+            string query_emp = "insert into [dbo].[employee] values (@nic, @fname, @lname, @houseNo, @address, @city, @zip, @dob, @age, @gender, @dateJoined, @rate);";
+            string query_contact = "insert into [dbo].[contact] values (@nic, @tp, @type);";
+
+            // get data from employee, assign them to query and exceute the query
+        }
+
+        public EmployeeModel getEmployee()
+        {
+            EmployeeModel employee = new EmployeeModel();
+
+            // get data from DB and assign them to above instant of EmployeeModel
+
+            return employee;
+        }
     }
 }

@@ -95,10 +95,10 @@
                                 @Html.DisplayFor(modelItem => item.payRate)
                             </td>
                             <td>
-                                @Html.ActionLink("edit", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-primary btn-sm all-cap" })
+                                @Html.ActionLink("edit", "Edit", new { id=item.nic }, new { @class = "btn btn-primary btn-sm all-cap" })
                             </td>
                             <td>
-                                @Html.ActionLink("remove", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger btn-sm all-cap" })
+                                @Html.ActionLink("remove", "Delete", new { id = item.nic }, new { @class = "btn btn-danger btn-sm all-cap" })
                             </td>
                         </tr>
                     </tbody>
