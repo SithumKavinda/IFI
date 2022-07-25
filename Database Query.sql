@@ -178,3 +178,17 @@ select * from [dbo].[contact];
 insert into [dbo].[employee] values (@nic, @fname, @lname, @houseNo, @address, @city, @zip, @dob, @age, @gender, @dateJoined, @rate);
 
 insert into [dbo].[contact] values (@nic, @tp, @type);
+
+-- Test select query for Fetch employees
+
+	--nic varchar(12)
+	--fname varchar(100)
+	--lname varchar(100)
+	--house_no varchar(20)
+	--address varchar(100)
+	--dob date
+	--age int
+	--gender char
+
+select e.nic, e.fname, e.lname, e.house_no, e.address, e.dob, e.age, e.gender
+from [dbo].[employee] e;
