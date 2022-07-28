@@ -39,6 +39,7 @@
                         </th>
                         <th scope="col"></th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
 
@@ -75,6 +76,9 @@
                             </td>
                             <td>
                                 @Html.ActionLink("remove", "Delete", new { id = item.nic }, new { @class = "btn btn-danger btn-sm all-cap" })
+                            </td>
+                            <td>
+                                @Html.ActionLink("details", "details", new {id = item.nic}, new { @class= "btn btn-info btn-sm all-cap" })
                             </td>
                         </tr>
                     </tbody>

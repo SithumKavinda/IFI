@@ -133,6 +133,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap_default.css" />
+    <Content Include="Content\details.css" />
     <Content Include="Content\Employee.css" />
     <Content Include="Content\emp_form.css" />
     <Content Include="Content\Home.css" />
@@ -165,6 +166,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Employee\create.cshtml" />
+    <Content Include="Views\Employee\details.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

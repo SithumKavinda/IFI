@@ -13,6 +13,7 @@ namespace Vidly
                       "~/Content/Home.css",
                       "~/Content/Employee.css",
                       "~/Content/emp_form.css",
+                      "~/Content/details.css",
                       "~/Content/bootstrap_default.css"));
         }
     }

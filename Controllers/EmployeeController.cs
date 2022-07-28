@@ -18,20 +18,27 @@ namespace Vidly.Controllers
             List<EmployeeModel> empList = EmployeeDAO.FetchEmployees();
             return View("Employee", empList);
         }
+
+        public ActionResult Details(string id)
+        {
+            EmployeeDAO employeeDAO = new EmployeeDAO();
+            EmployeeModel employee = employeeDAO.GetEmployee(id);
+            return View("details", employee);
+        }
+
+        public ActionResult Edit(string id)
+        {
+            return RedirectToAction("create");
+        }
+
         public ActionResult create()
         {
             return View("create");
         }
 
-        public ActionResult save()
-        {
-            return RedirectToAction("employee");
-            // Need to be changed
-        }
-
         public ActionResult Close()
         {
-            return RedirectToAction("employee");
+            return RedirectToAction("Employee");
         }
     }
 }

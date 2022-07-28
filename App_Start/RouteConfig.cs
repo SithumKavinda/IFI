@@ -20,6 +20,20 @@ namespace Vidly
                 defaults: new { controller = "Employee", action = "Employee" }
             );
 
+            // Close Details
+            routes.MapRoute(
+                name: "closeDetails",
+                url: "Employee/details/close",
+                defaults: new { controller = "Employee", action = "Close" }
+            );
+
+            // Open Edit from Details Page
+            routes.MapRoute(
+                name: "Edit",
+                url: "Employee/details/Edit",
+                defaults: new { controller = "Employee", action = "Edit" }
+            );
+
             // Open Registration form
             routes.MapRoute(
                 name: "register",

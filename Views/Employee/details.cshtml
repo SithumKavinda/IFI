@@ -1,0 +1,179 @@
+﻿@model Vidly.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="details-container">
+    <div class="controls">
+        <div class="edit-btn">
+            <a href="Edit" class="btn all-cap">
+                <i class="fa-solid fa-gears"></i>
+                edit
+            </a>
+        </div>
+        <div>
+            <a href="close" class="btn btn-close"></a>
+        </div>
+    </div>
+    <hr />  
+    <div class="employee-card mt-2 mb-3 rounded w-auto p-3">
+
+        <div class="profile-pic">
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+
+        <div class="nic-area">
+            @*National Identity Card*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    national identity card no:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.nic, null, new { @class = "text-center rounded border-0 p-1 all-cap", @readonly = true })
+                </div>
+            </div>
+        </div>
+
+        <div class="name-section">
+            @*First Name*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    first name:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.fName, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*Last Name*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    last name:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.lName, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+        </div>
+
+        <div class="person-data">
+            @*Gender*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    gender:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.gender, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+            @*DOB*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    date of birth:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.dob, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*Age*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    age:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.age, null, new { @class = "text-center rounded border-0 p-1 all-cap", @readonly = true })
+                </div>
+            </div>
+        </div>
+
+        <div class="address">
+            @*House No*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    house number:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.houseNo, null, new { @class = "text-center rounded border-0 p-1 all-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*Address*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    address:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.address, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*City*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    city:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.city, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*Postal Code*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    postal code:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.postalCode, null, new { @class = "text-center rounded border-0 p-1 all-cap", @readonly = true })
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts">
+            @*Mobile*@
+        <div class="detail-card">
+            <div class="label-class f-cap">
+                phone number [mobile]:
+            </div>
+            <div class="data-class">
+                @Html.TextBoxFor(model => model.phoneNo_mobile, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+            </div>
+        </div>
+
+            @*Home*@
+        <div class="detail-card">
+            <div class="label-class f-cap">
+                phone number [home]:
+            </div>
+            <div class="data-class">
+                @Html.TextBoxFor(model => model.phoneNo_home, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+            </div>
+        </div>
+        </div>
+
+        <div class="other">
+            @*Joined Date*@
+            <div class="detail-card">
+                <div class="label-class f-cap">
+                    joined date:
+                </div>
+                <div class="data-class">
+                    @Html.TextBoxFor(model => model.joinedDate, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+                </div>
+            </div>
+
+            @*Pay Rate*@
+        <div class="detail-card">
+            <div class="label-class f-cap">
+                pay rate:
+            </div>
+            <div class="data-class">
+                @Html.TextBoxFor(model => model.payRate, null, new { @class = "text-center rounded border-0 p-1 f-cap", @readonly = true })
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
